@@ -6,6 +6,7 @@
   --bg-black: #070a12;
   --text: #ffff;
   --primary: #146ac4;
+  --fdb-indent: var(--bg-light);
 }
 
 ::-webkit-scrollbar-track {
@@ -26,7 +27,49 @@
   padding: 5px !important;
   border-radius: 100px;
 }
+.fdb-microblog-preview {
+  background-color: var(--bg-extra-light)!important;
+  border: 1px solid var(--border-light);
+  padding: 10px;
+  margin-bottom: 5px;
+}
 
+.fdb-microblog{
+  padding: 20px;
+  background-color: var(--bg-extra-light);
+  border: 1px solid var(--border-light);
+}
+div:nth-child(2) > div:nth-child(5) > div {
+	 border-bottom-color: var(--border-light);
+}
+.fdb-microblog-preview .fdb-microblog{
+  background-color: transparent!important;
+  padding: 0!important;
+  border: none;
+}
+.fdb-main-container > div > div:nth-child(2) {
+  padding: 20px;
+  background-color: var(--bg-extra-light);
+
+}
+.fdb-main-container > div > .fdb-microblog-preview {
+  background-color: var(--bg-extra-light)!important;
+}
+
+.fdb-main-container > div > div:nth-child(2) span {
+  margin-right: 2px;
+}
+
+.fdb-main-container > div > div:nth-child(2) .fdb-button,
+button {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-right: 2px;
+}
+
+button.pb-tool-btn {
+  margin: 0;
+}
 /*this fix the problem with the miniplayer xp*/
 div div div {
   height: auto;
@@ -37,6 +80,7 @@ div.pb-play-btns {
 }
 
 div.fdb-threads-pad {
+  background: var(--bg-light)!important;
   padding: 10px;
   color: var(--text) !important;
 }
@@ -48,7 +92,7 @@ div.fdb-threads-pad .fdb-microblog-preview {
 }
 
 .fdb-tab-row {
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light) !important;
 }
 
 .fdb-main-container:nth-child(1) span {
@@ -183,9 +227,10 @@ a:nth-child(12) {
 .fdb-thread-preview-header {
   background-color: transparent;
 }
+
 /* POSTS RECENT MAIN PAGE*/
 .fdb-thread-preview {
-  background-color: var(--bg-light);
+  background-color: var(--bg-extra-light);
   margin-top: 20px;
   border-radius: 2px;
   border: 1px solid var(--border-light) !important;
@@ -199,23 +244,26 @@ hr {
 }
 
 /* PLAYER */
-.pb-player {
-  margin-bottom: 10px!important;
+.fdb-thread-preview .pb-player,
+.fdb-microblog-preview .pb-player {
+  margin-bottom: 10px !important;
   overflow: hidden;
-  height: 50%!important;
-  width: 300px!important;
+  height: 50% !important;
+  width: 300px !important;
   box-sizing: border-box;
-  object-fit: center!important;
-  transition: all .2s ease-in-out;
+  object-fit: center !important;
+  transition: all 0.2s ease-in-out;
 }
 
-.pb-player:active{
-  width: 500px!important;
-  transition: all .2s ease-in-out;
+.fdb-thread-preview  .pb-player:active,
+.fdb-microblog-preview  .pb-player:active
+ {
+  width: 500px !important;
+  transition: all 0.2s ease-in-out;
 }
-.pb-player img{
-  height: 100%!important;
-  width: 100%!important;
+.pb-player img {
+  height: 100% !important;
+  width: 100% !important;
 }
 
 .fdb-threads-pad:nth-child(5) {
@@ -245,7 +293,7 @@ span {
 }
 .fdb-indent > div > div {
   color: #c2c9ed;
-  border-bottom: 1px solid var(--border-light) !important;
+  border-bottom-color: var(--border-light) !important;
 }
 
 .fdb-main-container
@@ -270,7 +318,9 @@ a.noselect.fdb-tab {
 
 span.noselect.fdb-tab-active {
   background-color: var(--bg-extra-light);
-  border: none;
+  border: 1px solid var(--border-light);
+  border-bottom: none;
+  padding-top: 5px;
 }
 
 div.fdb-tab-row {
@@ -291,11 +341,8 @@ div.fdb-mdedit-preview {
 .fdb-main-container > div:nth-child(2) {
   background-color: transparent;
 }
-
-.fdb-microblog-preview {
-  background-color: var(--bg-extra-light);
-  border-bottom: 2px solid var(--border-light);
-  padding: 10px;
+.fdb-main-container > div:nth-child(2) > div {
+  border-bottom-color: var(--border-light);
 }
 
 div.noselect.fdb-tab-active {
@@ -303,30 +350,7 @@ div.noselect.fdb-tab-active {
   border: none;
 }
 
-.fdb-main-container > div > div > div {
-  border-bottom: 1px solid var(--border-light);
-}
-.fdb-main-container > div > div > div:nth-child(2) {
-  border: none;
-}
-.fdb-main-container > div > div:nth-child(2) {
-  padding: 20px;
-  background-color: var(--bg-extra-light);
-}
-.fdb-main-container > div > div:nth-child(2) span {
-  margin-right: 2px;
-}
-.fdb-main-container > div > div:nth-child(2) div:nth-child(2) {
-  border: none;
+.fdb-indent > div > div  {
+  border-bottom-color: var(--border-light);
 }
 
-.fdb-main-container > div > div:nth-child(2) .fdb-button,
-button {
-  margin-top: 5px;
-  margin-bottom: 0px;
-  margin-right: 2px;
-}
-
-button.pb-tool-btn {
-  margin: 0;
-}
