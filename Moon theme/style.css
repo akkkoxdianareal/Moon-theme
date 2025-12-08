@@ -165,7 +165,6 @@ a:nth-child(12) {
   border: none;
   width: 10;
   padding-right: 0;
-  margin-top: 20px;
   background-color: var(--bg-extra-light);
 }
 /* New users */
@@ -218,15 +217,23 @@ a:nth-child(12) {
   color: var(--primary) !important;
 }
 /* EPIC HEADER */
+.fdb-hamburger > div{
+  height: 3px;
+}
+.fdb-hamburger{
+  margin-top:10px;
+}
 .fdb-header {
   justify-content: center;
-  padding: 5px;
   color: #ffff;
-  background: var(--m-gradient)
+  padding: 0.5rem;
+  background: var(--m-gradient);
   /*background: linear-gradient(174deg,rgba(199, 80, 147, 1) 0%, rgba(154, 28, 166, 1) 100%);
   */
 }
-
+.fdb-mobile{
+  z-index: 20;
+}
 .fdb-header > div:nth-child(2) {
   flex-grow: 0.83 !important;
 }
@@ -363,4 +370,22 @@ div.noselect.fdb-tab-active {
 
 .fdb-indent > div > div {
   border-bottom-color: var(--border-light);
+}
+/*nav*/
+@media screen and (max-width: 1000px) {
+  .fdb-header .fdb-header-links {
+      box-sizing: border-box;
+      position: absolute;
+      top: 4rem;
+      left: 0;
+      z-index: 1100;
+      width: 100%;
+      background-color: #101010;
+      display: none;
+      flex-direction: column;
+      padding: 10px 20px 20px 20px;
+  }
+}
+.fdb-avatar-frame > img:last-of-type{
+  z-index: 200;
 }
