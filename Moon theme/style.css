@@ -2,12 +2,19 @@
 :root {
   --bg-extra-light: #1f2130;
   --bg-light: #161824;
-  --border-light: #2b2d40;
+  --border-light: #34374c;
   --bg-black: #070a12;
   --text: #ffff;
   --accent: #24af88;
-  --primary: #146ac4;
-  --fdb-indent: var(--bg-light);
+  --primary: #2888ee;
+  --primary-accent: #19253e;
+  --fdb-indent: var(--bg-extra-light);
+  --light-light: #222b47;
+  --m-gradient: linear-gradient(
+    174deg,
+    rgba(53, 154, 232, 1) 0%,
+    rgba(32, 95, 212, 1) 100%
+  );
 }
 
 ::-webkit-scrollbar-track {
@@ -34,6 +41,13 @@
   padding: 10px;
   margin-bottom: 5px;
 }
+.fdb-flex{
+  margin-top: 10px;
+}
+.fdb-thread-preview > a:last-of-type{
+  background-color: var(--primary-accent);
+  color: var(--text);
+}
 
 .fdb-microblog {
   padding: 20px;
@@ -48,10 +62,7 @@ div:nth-child(2) > div:nth-child(5) > div {
   padding: 0 !important;
   border: none;
 }
-.fdb-main-container > div > div:nth-child(2) {
-  padding: 20px;
-  background-color: var(--bg-extra-light);
-}
+
 .fdb-main-container > div > .fdb-microblog-preview {
   background-color: var(--bg-extra-light) !important;
 }
@@ -109,7 +120,6 @@ div.fdb-threads-pad .fdb-microblog-preview {
 }
 .fdb-main-container > div:nth-child(2) > div:nth-child(1) {
   background-color: transparent;
-  margin-bottom: 0px;
 }
 
 .fdb-discover:nth-child(1) {
@@ -121,7 +131,14 @@ div.fdb-threads-pad .fdb-microblog-preview {
 }
 body > div:nth-child(4) {
   background-color: var(--bg-black);
+ /* background-image: url('https://i.imgur.com/g1rdba2.png');*/
+  background-size: fit;
+  background-position: center;
 }
+/*
+.fdb-center-content{
+  padding-top: 10px!important;
+}*/
 .fdb-main-container {
   background-color: var(--bg-light);
 }
@@ -158,11 +175,7 @@ a:nth-child(12) {
   color: #ffff;
   height: 60px;
   width: 100%;
-  background: linear-gradient(
-    174deg,
-    rgba(53, 154, 232, 1) 0%,
-    rgba(32, 95, 212, 1) 100%
-  );
+  background: var(--m-gradient);
   text-shadow: none;
   border-radius: 5px;
   display: flex;
@@ -210,12 +223,7 @@ a:nth-child(12) {
   justify-content: center;
   padding: 5px;
   color: #ffff;
-  background: linear-gradient(
-    174deg,
-    rgba(53, 154, 232, 1) 0%,
-    rgba(32, 95, 212, 1) 100%
-  );
-
+  background: var(--m-gradient)
   /*background: linear-gradient(174deg,rgba(199, 80, 147, 1) 0%, rgba(154, 28, 166, 1) 100%);
   */
 }
@@ -272,11 +280,7 @@ hr {
 .fdb-main-container > div:nth-child(3) {
   background-color: var(--bg-light);
 }
-.fdb-main-container > div:nth-child(1) {
-  background: var(--bg-extra-light);
-  border-bottom: 1px solid var(--border-light);
-  padding-bottom: 20px;
-}
+
 
 h1 {
   color: var(--text);
@@ -309,19 +313,26 @@ span {
 .fdb-main-container > div:nth-child(1) > div:nth-child(2) {
   background-color: transparent;
 }
+.fdb-main-container > div:nth-child(1) {
+  background-color: transparent;
+  padding-bottom: 10px;
+}
+
 a.noselect.fdb-tab {
   background-color: transparent;
+  margin-bottom: 5px;
 }
 
 span.noselect.fdb-tab-active {
   background-color: var(--bg-extra-light);
   border: 1px solid var(--border-light);
   border-bottom: none;
+  margin-bottom: 5px;
   padding-top: 5px;
 }
 
 div.fdb-tab-row {
-  background-color: var(--bg-light);
+  background-color: transparent;
   padding-top: 10px;
 }
 
