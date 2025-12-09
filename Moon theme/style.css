@@ -292,8 +292,8 @@ h1 {
   color: var(--text);
 }
 
-div div div,
-span {
+.fdb-main-container > div:nth-child(1)>
+span:last-of-type {
   color: var(--text);
 }
 
@@ -323,7 +323,15 @@ span {
   background-color: transparent;
   padding-bottom: 10px;
 }
-
+.fdb-main-container > div:nth-child(3) >  h2, p{
+  color: var(--text);
+}
+.fdb-main-container > div:nth-child(2){
+  color: var(--text);
+}
+.fdb-main-container > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > span:first-of-type{
+  color: var(--text);
+}
 a.noselect.fdb-tab {
   background-color: transparent;
   margin-bottom: 5px;
@@ -335,6 +343,7 @@ span.noselect.fdb-tab-active {
   border-bottom: none;
   margin-bottom: 5px;
   padding-top: 5px;
+  color: var(--text);
 }
 
 div.fdb-tab-row {
